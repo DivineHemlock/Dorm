@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dorm
+    username: dorm_usr
+    password: '2511172968111'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    #two option (update, create-drop, validate)
+#    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8089
+  error:
+    include-message: ALWAYS
+    include-stacktrace: NEVER
+
